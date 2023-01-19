@@ -8,4 +8,8 @@ router.get("/", (req, res, next) => {
 const videogamesRouter = require("./gameform.routes");
 router.use("/videogames", videogamesRouter);
 
+const uploadRoutes = require("./upload.routes");
+router.use("/uploader", uploadRoutes);
+
+
 module.exports = router;
