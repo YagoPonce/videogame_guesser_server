@@ -7,7 +7,10 @@ const videogameSchema = new Schema(
     imageUrl: String,
     release: Date,
     description: String,
-    metacriticScore: Number
+    metacriticScore: Number,
+    developer: String,
+    genre: String
+
   },
   {
     timestamps: true
