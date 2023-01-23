@@ -18,3 +18,11 @@ const videogameSchema = new Schema(
 );
  
 module.exports = model("Videogame", videogameSchema);
+
+name: nameInput,
+      imageUrl: imageURL,
+      release: releaseInput,
+      description: descriptionInput,
+      metacriticScore: metacriticScoreInput,
+      developed: developerInput,
+      genre: genreInput,
