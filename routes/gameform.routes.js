@@ -42,6 +42,7 @@ router.post("/create-videogame", async (req, res, next) => {
       res.status(201).json("New videogame created in DB");
     } catch (error) {
     next(error);
+    console.log("no está funcionando")
     }
   });
 
