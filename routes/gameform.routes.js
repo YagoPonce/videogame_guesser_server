@@ -32,7 +32,7 @@ router.post("/create-videogame", async (req, res, next) => {
       release: release,
       description: description,
       metacriticScore: metacriticScore,
-      imageUrl: req.body.image === "" ? undefined : req.body.image,
+      imageUrl: req.body.imageUrl === "" ? undefined : req.body.imageUrl,
       genre: genre,
       developer: developer,
     };
