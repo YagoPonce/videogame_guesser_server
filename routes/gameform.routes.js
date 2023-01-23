@@ -24,12 +24,11 @@ router.post("/upload-image", fileUploader.single("imageUrl"), (req, res, next) =
   // POST '/api/videogames/create-videogame' => for saving a new videogame in the database
 router.post("/create-videogame", async (req, res, next) => {
   
-    const { name, release, description, imageUrl, metacriticScore, genre, developer } = req.body;
+    const { name, release, description, metacriticScore, genre, developer } = req.body;
   
     //get data from FE to send BE
     const newVideogame = {
       name: name,
-      imageUrl: imageUrl,
       release: release,
       description: description,
       metacriticScore: metacriticScore,
