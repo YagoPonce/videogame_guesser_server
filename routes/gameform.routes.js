@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const genres = require("../utils/genres")
 const Videogame = require("../models/Videogame.model")
 
 const fileUploader = require("../config/cloudinary.config");
@@ -49,7 +49,7 @@ router.post("/create-videogame", async (req, res, next) => {
 
   // GET "/api/videogames/genres" -> shows genres in Videogames model
 router.get("/genres", async (req, res, next) => {
-    res.status(200).json(tag);
+    res.status(200).json(genres);
   });
 
   module.exports = router;
