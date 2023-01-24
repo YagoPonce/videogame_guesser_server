@@ -6,6 +6,7 @@ const videogameSchema = new Schema(
   {
     name: String,
     imageUrl: String,
+    imageNameless: String,
     release: Date,
     description: String,
     metacriticScore: Number,

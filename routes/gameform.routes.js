@@ -33,12 +33,13 @@ router.post("/create-videogame", async (req, res, next) => {
       description: description,
       metacriticScore: metacriticScore,
       imageUrl: req.body.imageUrl === "" ? undefined : req.body.imageUrl,
+      imageNameless: req.body.imageNameless === "" ? undefined : req.body.imageNameless,
       players: players,
       genre: genre,
       developer: developer,
     };
   
-    //use newRecipe to create new Recipe in DB
+    //use newVideogame to create newVideogame in DB
     try {
       await Videogame.create(newVideogame);
       res.status(201).json("New videogame created in DB");
