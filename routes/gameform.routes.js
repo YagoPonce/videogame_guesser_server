@@ -24,7 +24,7 @@ router.post("/upload-image", fileUploader.single("imageUrl"), (req, res, next) =
   // POST '/api/videogames/create-videogame' => for saving a new videogame in the database
 router.post("/create-videogame", async (req, res, next) => {
   
-    const { name, release, description, metacriticScore, genre, developer } = req.body;
+    const { name, release, description, metacriticScore, players, genre, developer } = req.body;
   
     //get data from FE to send BE
     const newVideogame = {
@@ -33,6 +33,7 @@ router.post("/create-videogame", async (req, res, next) => {
       description: description,
       metacriticScore: metacriticScore,
       imageUrl: req.body.imageUrl === "" ? undefined : req.body.imageUrl,
+      players: players,
       genre: genre,
       developer: developer,
     };
@@ -44,6 +45,11 @@ router.post("/create-videogame", async (req, res, next) => {
     } catch (error) {
       next(error);
     }
+  });
+
+  // GET "/api/videogames/genres" -> shows genres in Videogames model
+router.get("/genres", async (req, res, next) => {
+    res.status(200).json(tag);
   });
 
   module.exports = router;

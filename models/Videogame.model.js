@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
+const genres = require("../utils/genres")
  
 const videogameSchema = new Schema(
   {
@@ -9,12 +10,15 @@ const videogameSchema = new Schema(
     description: String,
     metacriticScore: Number,
     developer: String,
-    genre: String
-
+    players: Number,
+    genre: {
+      type: String,
+      enum: genres,
+    },
   },
   {
     timestamps: true
   }
 );
  
-module.exports = model("Videogame", videogameSchema);
+module.exports = model("Videogame", videogameSchema);   
