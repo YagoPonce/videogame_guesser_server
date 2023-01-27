@@ -13,7 +13,7 @@ const videogameSchema = new Schema(
     developer: String,
     players: Number,
     genre: [{
-      type: String[],
+      type: String,
       enum: genres,
     }],
   },
