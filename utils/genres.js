@@ -16,5 +16,6 @@ const genres = [
     "Deporte",
     "Guerra"
 
-]
+];
+
 module.exports = genres

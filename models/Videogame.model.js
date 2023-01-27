@@ -12,10 +12,10 @@ const videogameSchema = new Schema(
     metacriticScore: Number,
     developer: String,
     players: Number,
-    genre: {
-      type: String,
+    genre: [{
+      type: String[],
       enum: genres,
-    },
+    }],
   },
   {
     timestamps: true
